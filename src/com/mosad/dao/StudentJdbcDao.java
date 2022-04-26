@@ -27,7 +27,7 @@ public class StudentJdbcDao {
             ps.setString(1, name);
             ps.setString(2, email);
             ps.executeUpdate();
-            System.out.println("Student Added");
+            System.out.println("Student Added : " + name);
             return true;
         } catch (Exception ex) {
             ex.printStackTrace();
