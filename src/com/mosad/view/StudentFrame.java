@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mosad.frame;
+package com.mosad.view;
 
 import com.mosad.dao.StudentJdbcDao;
 import com.mosad.service.StudentService;
@@ -62,8 +62,8 @@ public class StudentFrame {
         addButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                StudentJdbcDao studentJdbcDao = new StudentJdbcDao();
-                studentJdbcDao.addStudent(studentNameText.getText(), studentEmailText.getText());
+               StudentService studentService = new StudentService();
+               studentService.addStudent(studentNameText.getText(), studentEmailText.getText());
             }
         });
 

@@ -29,8 +29,7 @@ public class StudentService {
                 String name = fRow.getCell(0).getStringCellValue();
                 String email = fRow.getCell(1).getStringCellValue();
 
-                StudentJdbcDao studentJdbcDao = new StudentJdbcDao();
-                studentJdbcDao.addStudent(name, email);
+                addStudent(name, email);
             }
         } catch (Exception ex) {
             System.err.println("Error in import Excel");
@@ -38,7 +37,8 @@ public class StudentService {
         }
     }
     
-    public void addStudent(){
-        StudentJdbcDao studentJdbcDao = new 
+    public void addStudent(String name , String email){
+        StudentJdbcDao studentJdbcDao = new StudentJdbcDao();
+        studentJdbcDao.addStudent(name, email);
     }
 }

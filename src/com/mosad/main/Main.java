@@ -5,7 +5,7 @@
  */
 package com.mosad.main;
 
-import com.mosad.frame.StudentFrame;
+import com.mosad.view.StudentFrame;
 
 public class Main {
     
